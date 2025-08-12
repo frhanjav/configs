@@ -67,7 +67,7 @@
     "command": "editor.emmet.action.matchTag"
   },
   {
-    "key": "cmd+z",
+    "key": "ctrl+z",
     "command": "workbench.action.toggleZenMode"
   }
 ]

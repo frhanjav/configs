@@ -73,4 +73,4 @@
 
 ### **Miscellaneous**
 - **`Cmd+Shift+5`**: Match HTML/XML tag
-- **`Cmd+Z`**: Toggle zen mode
+- **`Ctrl+Z`**: Toggle zen mode
