@@ -36,7 +36,7 @@
     // panes
     {
       "before": ["leader", "h"],
-      "commands": ["workbench.actin.focusLeftGroup"]
+      "commands": ["workbench.action.focusLeftGroup"]
     },
     {
       "before": ["leader", "j"],
