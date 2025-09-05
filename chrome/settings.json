@@ -1,0 +1,196 @@
+{
+  "[markdown]": {
+    "editor.formatOnSave": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.markdownlint": "explicit",
+    "source.organizeImports": "explicit",
+    "source.fixAll.rust-analyzer": "explicit"
+  },
+  "editor.lineNumbers": "relative",
+  "editor.fontSize": 16,
+  "window.zoomLevel": 0.5,
+  "terminal.integrated.fontSize": 14,
+  "workbench.iconTheme": "material-icon-theme",
+  "explorer.confirmDelete": false,
+  "json.schemas": [
+    {
+      "fileMatch": ["/myfile"],
+      "url": "schemaURL"
+    }
+  ],
+
+  "vim.leader": "<Space>",
+  "vim.hlsearch": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // NAVIGATION
+    // switch b/w buffers
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+
+    // splits
+    { "before": ["leader", "v"], "commands": [":vsplit"] },
+    { "before": ["leader", "s"], "commands": [":split"] },
+
+    // panes
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    // NICE TO HAVE
+    { "before": ["leader", "w"], "commands": [":w!"] },
+    { "before": ["leader", "q"], "commands": [":q!"] },
+    { "before": ["leader", "x"], "commands": [":x!"] },
+    {
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    {
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    // Stay in visual mode while indenting
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    // Move selected lines while staying in visual mode
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    // toggle comment selection
+    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+  ],
+
+  "explorer.confirmDragAndDrop": false,
+  "window.commandCenter": false,
+  "editor.minimap.enabled": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.indentSize": "tabSize",
+  "editor.insertSpaces": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
+  },
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.wordWrap": "on",
+  "python.createEnvironment.trigger": "off",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 4,
+  "editor.detectIndentation": false,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true
+  },
+  "files.autoSave": "afterDelay",
+  "terminal.explorerKind": "external",
+  "terminal.external.osxExec": "iterm.app",
+  // "workbench.colorCustomizations": {
+  //   "editor.background": "#0b0a0a"
+  // },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "comment",
+        "settings": {
+          "foreground": "#A0A0A0",
+          "fontStyle": "" // This removes italic
+        }
+      },
+      {
+        "scope": [
+          "storage.type", // for Rust types like `i8`, `u32`
+          "support.type", // additional type support
+          "keyword.type", // some themes use this
+          "entity.name.type", // fallback for certain highlighters
+          "source.rust storage.type" // specifically for Rust
+        ],
+        "settings": {
+          "fontStyle": "" // removes italic
+        }
+      }
+    ]
+  },
+  "workbench.colorTheme": "Panda Syntax",
+  "editor.fontFamily": "Fira Code, JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 22,
+  "editor.cursorBlinking": "smooth",
+  "editor.renderWhitespace": "all",
+  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "sherlock.userId": "75d4bcb5-a8c4-40e4-baac-e2c70352381f",
+  "workbench.editor.empty.hint": "hidden",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.enableTroubleshootMissingImports": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "files.associations": {
+    "*.css": "tailwindcss",
+    "*.scss": "tailwindcss"
+  },
+  "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "go": false,
+    "typescriptreact": true,
+    "rust": false
+  },
+  "terminal.integrated.scrollback": 3000,
+  "breadcrumbs.enabled": false
+}
